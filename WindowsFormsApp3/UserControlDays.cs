@@ -23,7 +23,7 @@ namespace WindowsFormsApp3
         }
 
         private void UserControlDays_Load(object sender, EventArgs e)
-        {
+        { 
 
         }
         public void days(int numday)
