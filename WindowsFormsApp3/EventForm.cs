@@ -22,7 +22,7 @@ namespace WindowsFormsApp3
 
         private void EventForm_Load(object sender, EventArgs e)
         {
-
+            textBox2.Text = UserControlDays.static_day + "." + Form1.static_mount + "." + Form1.static_years;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,8 +32,8 @@ namespace WindowsFormsApp3
             String sql = "INSERT INTO tbl_calendar(date, event)values(?,?)";
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = sql;
-            cmd.Parameters.AddWithValue("date", textBox1.Text);
-            cmd.Parameters.AddWithValue("event", textBox2.Text);
+            cmd.Parameters.AddWithValue("date", textBox2.Text);
+            cmd.Parameters.AddWithValue("event", textBox1.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
             cmd.Dispose();
